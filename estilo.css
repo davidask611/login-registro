@@ -1,0 +1,65 @@
+/* ocultar el formulario de inicio de sesión */
+#iniciar-sesion {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  transition: all 1s ease-in-out;
+}
+/* Estilos para el enlace de "Iniciar sesión" */
+#iniciar-sesion a {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+}
+p {
+  text-align: center;
+}
+/* mostrar el formulario de registro cuando se carga la página */
+/* Fondo gris para el body */
+body {
+  background-color: #ddd;
+}
+
+/* Estilos para los formularios */
+form {
+  height: 200px;
+  width: 400px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  transition: all 1s ease-in-out;
+  background-color: #ffc0cb;
+  border: 1px solid #00f;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* cuando el usuario hace clic en "Ya tengo cuenta" */
+#iniciar-sesion:target {
+  display: block;
+  z-index: 2;
+}
+
+/* cuando el usuario hace clic en "Regístrate aquí" */
+form:target {
+  display: none;
+  z-index: -1;
+}
+/* Estilos para el enlace de "Ya tengo cuenta" */
+#registro a {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+}
+/* Estilos para los enlaces de registro e iniciar sesión */
+a {
+  text-decoration: none;
+  color: #000;
+}
